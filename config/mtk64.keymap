@@ -14,18 +14,8 @@
     quick-tap-ms = <0>;
 };
 
-&mkp_input_listener { 
-    input-processors = <&zip_temp_layer 6 5000>; 
-};
-
-/* layer_3専用の反転プロセッサを新しく定義 */
-/ {
-    ib_layer3_inv: ib_layer3_inv {
-        compatible = "zmk,input-behavior-listener";
-        device = <&pd0>;
-        layers = <3>;
-        input-processors = <&zip_xy_scaler 1 (-1)>;
-    };
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 6 5000>;
 };
 
 / {
@@ -161,6 +151,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            trackball-bindings = <&msc SCRL_UP SCRL_DOWN>;
         };
     };
 };
