@@ -15,7 +15,7 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 6 5000>, <&zip_xy_to_scroll_scaler 1 (-1)>;
+    input-processors = <&zip_temp_layer 6 5000>;
 };
 
 / {
@@ -130,7 +130,7 @@
             >;
 
             sensor-bindings = <
-                &scroll_up_down SCRL_DOWN SCRL_UP
+                &scroll_up_down SCRL_UP SCRL_DOWN
                 &scroll_left_right SCRL_LEFT SCRL_RIGHT
             >;
         };
