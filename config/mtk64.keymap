@@ -14,12 +14,9 @@
     quick-tap-ms = <0>;
 };
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 6 5000>;
+    input-processors = <&zip_temp_layer 6 5000>, <&zip_layer_transform_with_layers 6 &zip_xy_scaler 1 (-1)>;
 };
-&msc_input_listener {
-    layers = <6>; // layer_6がアクティブな時だけ連動
-    input-processors = <&zip_xy_scaler 1 (-1)>; // Y軸のみ反転
-};
+
 / {
     behaviors {
         // 垂直スクロール用のbehaviorの設定
