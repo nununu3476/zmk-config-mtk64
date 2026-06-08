@@ -113,7 +113,7 @@
 
         layer_2 {
             bindings = <
-&kp ESCAPE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp LA(TAB)  &kp LS(LG(S))  &kp LC(W)  &kp LG(E)  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &trans  &mkp MB3  &mkp RCLK  &kp DELETE  &kp UNDERSCORE  &kp DELETE  &kp LEFT_CONTROL  &kp LC(A)  &kp LC(S)  &kp LC(C)  &kp LC(V)  &kp LC(F)  &mkp MB4  &mkp LCLK  &mkp RCLK  &lt 3 DELETE  &kp END  &kp ENTER  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp PERIOD  &kp EQUAL  &mkp MB4  &mkp MB5  &kp LS(LC(TAB))  &kp LC(W)  &mkp MB3  &mkp MB3  &trans  &trans  &kp LEFT_ALT  &trans  &trans  &kp INS  &kp BACKSPACE  &trans  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp LA(TAB)  &kp LS(LG(S))  &kp LC(W)  &kp LG(E)  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp LS(LC(T))  &mkp MB3  &mkp RCLK  &kp DELETE  &kp UNDERSCORE  &kp DELETE  &kp LEFT_CONTROL  &kp LC(A)  &kp LC(S)  &kp LC(C)  &kp LC(V)  &kp LC(F)  &mkp MB4  &mkp LCLK  &mkp RCLK  &lt 3 DELETE  &kp END  &kp ENTER  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp PERIOD  &kp EQUAL  &mkp MB4  &mkp MB5  &kp LS(LC(TAB))  &kp LC(W)  &mkp MB3  &mkp MB3  &trans  &trans  &kp LEFT_ALT  &trans  &trans  &kp INS  &kp BACKSPACE  &trans  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &kp LC(LS(TAB))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <
