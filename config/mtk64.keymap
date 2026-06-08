@@ -15,7 +15,7 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 6 5000>;
+    input-processors = <&zip_scroll_scaler 1 1>, <&zip_layer_transform_with_id 3 &zip_scroll_scaler 1 (-1)>;
 };
 
 / {
@@ -151,8 +151,6 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&scroll_up_down SCRL_DOWN SCRL_UP>;
         };
     };
 };
