@@ -1,5 +1,6 @@
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include "keycode_japanese.h"
@@ -40,6 +41,57 @@
 };
 
 / {
+    macros {
+        mail_parasa: mail_parasa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp P &kp A &kp R &kp A &kp S &kp A &kp N3 &kp N4 &kp N7 &kp N6 &kp LEFT_BRACKET &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL_PARASA";
+        };
+
+        mail_rikoru: mail_rikoru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp R &kp I &kp K &kp O &kp R &kp U &kp N3 &kp N4 &kp N7 &kp N6 &kp LEFT_BRACKET &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL_RIKORU";
+        };
+
+        Rikopass: Rikopass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp LS(R) &kp I &kp K &kp O &kp R &kp U &kp N3 &kp N4 &kp N7 &kp N6 &kp EXCL &kp ENTER>;
+            label = "RIKOPASS";
+        };
+
+        ShiftPass: ShiftPass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp N &kp LS(S) &kp A &kp LS(T) &kp N0 &kp N7 &kp N8 &kp N8>;
+            label = "SHIFTPASS";
+        };
+
+        RpaLogin: RpaLogin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(O) &kp LS(B) &kp U &kp P &kp MINUS &kp LS(U) &kp Y &kp N9>;
+            label = "RPALOGIN";
+        };
+
+        LinuxLogin: LinuxLogin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp S &kp H &kp SPACE &kp MINUS &kp I &kp SPACE &kp LS(X) &kp LS(O) &kp LS(C) &kp MINUS &kp E &kp DOT &kp P &kp E &kp M &kp SPACE &kp N1 &kp N9 &kp N2 &kp DOT &kp N1 &kp N6 &kp N8 &kp DOT &kp N0 &kp DOT &kp N1 &kp N7>;
+            label = "LINUXLOGIN";
+        };
+
+        Emp_num: Emp_num {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp N0 &kp N0 &kp N0 &kp N3 &kp N6 &kp N2 &kp N0>;
+            label = "EMP_NUM";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -72,7 +124,7 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE  &kp LC(LS(TAB))  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp F7  &kp F8  &kp F9  &trans  &trans  &trans  &kp UP_ARROW  &kp MINUS  &trans  &trans  &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp F4  &kp F5  &kp F6  &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp LC(LS(TAB))  &kp F10  &kp F11  &kp F12  &trans  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &kp HOME  &kp LEFT_ARROW  &kp F7  &kp F8  &kp F9  &trans  &LinuxLogin  &kp LS(APOS)  &kp UP_ARROW  &kp MINUS  &kp LEFT_BRACKET  &kp BACKSPACE  &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp F4  &kp F5  &kp F6  &trans  &RpaLogin  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &kp LS(LEFT_BRACKET)  &kp ENTER  &trans  &trans  &kp F1  &kp F2  &kp F3  &trans  &mail_parasa  &mail_rikoru  &ShiftPass  &Rikopass  &trans  &Emp_num  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <
