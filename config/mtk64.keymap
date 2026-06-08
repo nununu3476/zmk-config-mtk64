@@ -33,7 +33,7 @@
         scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
             tap-ms = <20>; // スクロールのタップ時間
         };
