@@ -14,9 +14,7 @@
     quick-tap-ms = <0>;
 };
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 6 5000>;
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 6 5000>; };
 
 / {
     behaviors {
@@ -54,7 +52,7 @@
         mail_rikoru: mail_rikoru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp R &kp I &kp K &kp O &kp R &kp U &kp N3 &kp N4 &kp N7 &kp N6 &kp LEFT_BRACKET &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp RIGHT_ALT &kp LS(R) &kp I &kp K &kp O &kp R &kp U &kp N3 &kp N4 &kp N7 &kp N6 &kp LEFT_BRACKET &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "MAIL_RIKORU";
         };
 
