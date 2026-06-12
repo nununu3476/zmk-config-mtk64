@@ -25,21 +25,21 @@
         // 垂直スクロール用のbehaviorの設定
 
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <40>; // スクロールのタップ時間 (msc は16ms周期で発火するため2周期以上確保する)
+            tap-ms = <20>; // スクロールのタップ時間
         };
 
         // 水平スクロール用のbehaviorの設定
 
         scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <40>; // スクロールのタップ時間 (msc は16ms周期で発火するため2周期以上確保する)
+            tap-ms = <20>; // スクロールのタップ時間
         };
     };
 };
@@ -106,7 +106,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
-                <&scroll_up_down SCRL_UP SCRL_DOWN>;
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         layer_1 {
@@ -132,8 +132,8 @@
             >;
 
             sensor-bindings = <
-                &scroll_up_down SCRL_UP SCRL_DOWN
-                &scroll_left_right SCRL_LEFT SCRL_RIGHT
+                &scroll_left_right
+                &scroll_up_down
             >;
         };
 
