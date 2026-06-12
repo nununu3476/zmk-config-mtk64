@@ -32,3 +32,16 @@
 };
 
 &xiao_serial { status = "disabled"; };
+
+// セントラル側に物理エンコーダーが無い場合、EC11 ドライバーがビルドされず
+// ペリフェラル(左手)のエンコーダー入力が届かない (ZMK #2301)。
+// sensors ノードには含めず、未使用ピンでドライバー有効化のみ行う。
+/ {
+    central_ec11_dummy: central_ec11_dummy {
+        compatible = "alps,ec11";
+        a-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <15>;
+        status = "okay";
+    };
+};
