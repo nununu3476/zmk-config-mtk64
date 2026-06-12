@@ -151,6 +151,16 @@
         status = "disabled";
     };
 
+    // セントラル(右手)側で EC11 ドライバーを有効化するためのダミー (ZMK #2301)
+    // sensors には含めない。sensors リスト外の status=okay ノードで DT_HAS_ALPS_EC11_ENABLED を満たす
+    central_ec11_dummy: central_ec11_dummy {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <15>;
+        status = "disabled";
+    };
+
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
