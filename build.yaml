@@ -17,17 +17,18 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-# ZMK v0.3 (Zephyr 3.5) ではボード名は "xiao_ble"（"//zmk" なし）
+# ZMK v0.3 (Zephyr 3.5) でのボード名は "seeeduino_xiao_ble"
+# ("xiao_ble//zmk" は ZMK main/Zephyr 4.1 以降の名前)
 # Studio (snippet: studio-rpc-usb-uart, -DCONFIG_ZMK_STUDIO=y) は
 # 安定性確認のため一時的に無効化。戻す場合は mtk64_R に以下を追加:
 #   snippet: studio-rpc-usb-uart
 #   cmake-args: -DCONFIG_ZMK_STUDIO=y
 include:
- - board: xiao_ble
+ - board: seeeduino_xiao_ble
    shield: mtk64_R rgbled_adapter
- - board: xiao_ble
+ - board: seeeduino_xiao_ble
    shield: mtk64_L rgbled_adapter
-# - board: xiao_ble
+# - board: seeeduino_xiao_ble
 #   shield: mtk64_FOOT rgbled_adapter
- - board: xiao_ble
+ - board: seeeduino_xiao_ble
    shield: settings_reset
