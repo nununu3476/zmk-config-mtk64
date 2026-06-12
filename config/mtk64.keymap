@@ -1,13 +1,13 @@
+// スクロール量の設定 (pointing.h を include する前に定義しないと効かない)
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include "keycode_japanese.h"
-
-// スクロール量の設定
-
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &mt {
     flavor = "balanced";
@@ -29,7 +29,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <40>; // スクロールのタップ時間 (msc は16ms周期で発火するため2周期以上確保する)
         };
 
         // 水平スクロール用のbehaviorの設定
@@ -39,7 +39,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <40>; // スクロールのタップ時間 (msc は16ms周期で発火するため2周期以上確保する)
         };
     };
 };
