@@ -14,10 +14,8 @@
     quick-tap-ms = <0>;
 };
 
-&lt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <0>;
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 6 5000>;
 };
 
 / {
